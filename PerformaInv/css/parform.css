@@ -1,0 +1,91 @@
+﻿.td
+{
+    width : 350px;
+ text-align :center;
+}
+
+.txtbox
+{
+    width:350px;
+    font-family :Tahoma,Verdana;
+    font-size :10pt;
+    height :20px;    
+}
+.lbl
+{
+  font-family :Tahoma,Verdana;
+  font-size :11pt;   
+  font-weight :bold; 
+  color:Blue ;
+ 
+}
+.lblt
+{
+  font-family :Tahoma,Verdana;
+  font-size :14pt;   
+  font-weight :bold; 
+  color:Blue ;
+}
+
+.ftd
+{
+width : 200px;
+ text-align :center ;
+}
+.tdimg
+{
+    width:150px;
+}
+.tdcl
+{
+    width:80px;
+}
+.tabpar
+{
+   background-color : #cde6ff;
+    }
+.tbr
+{
+    background-color :#e8e5ef;
+    width: 523px;
+    border :1px Solid blue;
+}
+.rttab
+{
+  width: 100px;  
+  
+}
+.untdp
+{
+    width:85px;
+}
+.tdtit
+{
+    width:220px;
+    text-align :center ;
+}
+.fultab
+{
+    width:112%;
+}
+.tddiv
+{
+    width :150px;
+}
+.tdsearch
+{
+ width : 180px;
+   
+}
+.tdts
+{
+  width:130px;   
+}
+.tdst
+{
+    width : 110px;
+}
+.tdgv
+{
+    width:350px;
+}

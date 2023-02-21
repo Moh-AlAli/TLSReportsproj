@@ -1,0 +1,742 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49C6E86F-654D-406E-8D8D-F9F054E79397}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CATS.ReportsProj</RootNamespace>
+    <AssemblyName>ReportsProj</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ReportsProj.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ReportsProj.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="carsindex.aspx" />
+    <Content Include="carsinstock.aspx" />
+    <Content Include="carsunstuffed.aspx" />
+    <Content Include="cdblbyagent.aspx" />
+    <Content Include="cddtcode.aspx" />
+    <Content Include="cdgdpallblag.aspx" />
+    <Content Include="cdgdshipbyagent.aspx" />
+    <Content Include="cdgoodshipped.aspx" />
+    <Content Include="cdunstuffed.aspx" />
+    <Content Include="continspec.aspx" />
+    <Content Include="gbl.aspx" />
+    <Content Include="gcomp.aspx" />
+    <Content Include="gdshbl.aspx" />
+    <Content Include="gdshcomp.aspx" />
+    <Content Include="img\close-icon-29.png" />
+    <Content Include="invsestatement.aspx" />
+    <Content Include="invsumbyser.aspx" />
+    <Content Include="jq\jquery-1.8.3.js" />
+    <Content Include="jq\jquery-ui-1.9.2.custom.js" />
+    <Content Include="jq\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="js\angular.js" />
+    <Content Include="js\app.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\external\jquery\jquery.js" />
+    <Content Include="js\images\ui-icons_444444_256x240.png" />
+    <Content Include="js\images\ui-icons_555555_256x240.png" />
+    <Content Include="js\images\ui-icons_777620_256x240.png" />
+    <Content Include="js\images\ui-icons_777777_256x240.png" />
+    <Content Include="js\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="js\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="js\index.html" />
+    <Content Include="js\jquery-1.12.3.min.js" />
+    <Content Include="js\jquery-ui.css" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery-ui.min.css" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery-ui.structure.css" />
+    <Content Include="js\jquery-ui.structure.min.css" />
+    <Content Include="js\jquery-ui.theme.css" />
+    <Content Include="js\jquery-ui.theme.min.css" />
+    <Content Include="js\MainController.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="rptmonthly.aspx" />
+    <Content Include="srchcdat9.aspx" />
+    <Content Include="srchcdcom.aspx" />
+    <Content Include="srchdecl.aspx" />
+    <Content Include="tlsrevenues.aspx" />
+    <Content Include="xml\cdblbag.xml" />
+    <Content Include="cdemptycont.aspx" />
+    <Content Include="cdgoodspallet.aspx" />
+    <Content Include="cdlayout.aspx" />
+    <Content Include="css\parform.css" />
+    <Content Include="dcinstock.aspx" />
+    <Content Include="dcunstuffed.aspx" />
+    <Content Include="exportcont.aspx" />
+    <Content Include="img\clear.png" />
+    <Content Include="img\calendar.jpg" />
+    <Content Include="img\search.png" />
+    <Content Include="img\vprt.png" />
+    <Content Include="img\waitproc.jpg" />
+    <Content Include="invoice.aspx" />
+    <Content Include="searchdcbl.aspx" />
+    <Content Include="searchdccomp.aspx" />
+    <Content Include="searchdiat.aspx" />
+    <Content Include="searchduat.aspx" />
+    <Content Include="srchbl.aspx" />
+    <Content Include="srchcomp.aspx" />
+    <Content Include="srchiat9.aspx" />
+    <Content Include="srchunat9.aspx" />
+    <Content Include="srctxt\srccon.txt" />
+    <Content Include="test.aspx" />
+    <Content Include="unstuffedload.aspx" />
+    <Content Include="unstuffedreturn.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xml\cars.xml" />
+    <Content Include="xml\cdgdsh.xml" />
+    <Content Include="xml\cdlay.xml" />
+    <Content Include="xml\cdunsfd.xml" />
+    <Content Include="xml\crinscomp.xml" />
+    <Content Include="xml\crinstock.xml" />
+    <Content Include="xml\dcinstock.xml" />
+    <Content Include="xml\dcunstd.xml" />
+    <Content Include="xml\emcont.xml" />
+    <Content Include="xml\expcon.xml" />
+    <Content Include="xml\gdpallet.xml" />
+    <Content Include="xml\carsunstuffed.xml" />
+    <Content Include="xml\perinv.xml" />
+    <Content Include="xml\unstload.xml" />
+    <Content Include="xml\unstufreturn.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="carsindex.aspx.designer.vb">
+      <DependentUpon>carsindex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carsindex.aspx.vb">
+      <DependentUpon>carsindex.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="carsinstock.aspx.designer.vb">
+      <DependentUpon>carsinstock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carsinstock.aspx.vb">
+      <DependentUpon>carsinstock.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="carsunstuffed.aspx.designer.vb">
+      <DependentUpon>carsunstuffed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carsunstuffed.aspx.vb">
+      <DependentUpon>carsunstuffed.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cdblbyagent.aspx.designer.vb">
+      <DependentUpon>cdblbyagent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cdblbyagent.aspx.vb">
+      <DependentUpon>cdblbyagent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cddtcode.aspx.designer.vb">
+      <DependentUpon>cddtcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cddtcode.aspx.vb">
+      <DependentUpon>cddtcode.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cdemptycont.aspx.designer.vb">
+      <DependentUpon>cdemptycont.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cdemptycont.aspx.vb">
+      <DependentUpon>cdemptycont.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cdgdpallblag.aspx.designer.vb">
+      <DependentUpon>cdgdpallblag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cdgdpallblag.aspx.vb">
+      <DependentUpon>cdgdpallblag.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cdgdshipbyagent.aspx.designer.vb">
+      <DependentUpon>cdgdshipbyagent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cdgdshipbyagent.aspx.vb">
+      <DependentUpon>cdgdshipbyagent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cdgoodshipped.aspx.designer.vb">
+      <DependentUpon>cdgoodshipped.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cdgoodshipped.aspx.vb">
+      <DependentUpon>cdgoodshipped.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cdgoodspallet.aspx.designer.vb">
+      <DependentUpon>cdgoodspallet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cdgoodspallet.aspx.vb">
+      <DependentUpon>cdgoodspallet.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cdlayout.aspx.designer.vb">
+      <DependentUpon>cdlayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cdlayout.aspx.vb">
+      <DependentUpon>cdlayout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cdunstuffed.aspx.designer.vb">
+      <DependentUpon>cdunstuffed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cdunstuffed.aspx.vb">
+      <DependentUpon>cdunstuffed.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="continspec.aspx.designer.vb">
+      <DependentUpon>continspec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="continspec.aspx.vb">
+      <DependentUpon>continspec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dcinstock.aspx.designer.vb">
+      <DependentUpon>dcinstock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dcinstock.aspx.vb">
+      <DependentUpon>dcinstock.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="dcunstuffed.aspx.designer.vb">
+      <DependentUpon>dcunstuffed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dcunstuffed.aspx.vb">
+      <DependentUpon>dcunstuffed.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="clsreport.vb" />
+    <Compile Include="exportcont.aspx.designer.vb">
+      <DependentUpon>exportcont.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exportcont.aspx.vb">
+      <DependentUpon>exportcont.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gbl.aspx.designer.vb">
+      <DependentUpon>gbl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gbl.aspx.vb">
+      <DependentUpon>gbl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="gcomp.aspx.designer.vb">
+      <DependentUpon>gcomp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gcomp.aspx.vb">
+      <DependentUpon>gcomp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="gdshbl.aspx.designer.vb">
+      <DependentUpon>gdshbl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gdshbl.aspx.vb">
+      <DependentUpon>gdshbl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="gdshcomp.aspx.designer.vb">
+      <DependentUpon>gdshcomp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gdshcomp.aspx.vb">
+      <DependentUpon>gdshcomp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="invsestatement.aspx.designer.vb">
+      <DependentUpon>invsestatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invsestatement.aspx.vb">
+      <DependentUpon>invsestatement.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="invsumbyser.aspx.designer.vb">
+      <DependentUpon>invsumbyser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invsumbyser.aspx.vb">
+      <DependentUpon>invsumbyser.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="invoice.aspx.designer.vb">
+      <DependentUpon>invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invoice.aspx.vb">
+      <DependentUpon>invoice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="reports\Dailyinspection.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dailyinspection.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R10DCunstuff.vb">
+      <DependentUpon>R10DCunstuff.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="reports\R13cdblbyagentpdf.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R13cdblbyagentpdf.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R15gdpallblag.vb">
+      <DependentUpon>R15gdpallblag.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="reports\R12goodspallet.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R12goodspallet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R16cdgdshipped.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R16cdgdshipped.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R17cdgdshippedbyagent.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R17cdgdshippedbyagent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R1performainvoice.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R1performainvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R11vdcinstock.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R11vdcinstock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R18invstatement.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R18invstatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R13cdblbyagent1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R13cdblbyagent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R14cdunstuff.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R14cdunstuff.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R7carsindex.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R7carsindex.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R6crossdockingindex.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R6crossdockingindex.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R2cdemptycont.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R2cdemptycont.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R4loadformbyCD.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R4loadformbyCD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R3exportcont.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R3exportcont.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R5cdrtemty.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R5cdrtemty.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R9carsunstuff.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R9carsunstuff.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\R8carsinstock.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R8carsinstock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptmonthly.aspx.designer.vb">
+      <DependentUpon>rptmonthly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rptmonthly.aspx.vb">
+      <DependentUpon>rptmonthly.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="searchdcbl.aspx.designer.vb">
+      <DependentUpon>searchdcbl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchdcbl.aspx.vb">
+      <DependentUpon>searchdcbl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="searchdccomp.aspx.designer.vb">
+      <DependentUpon>searchdccomp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchdccomp.aspx.vb">
+      <DependentUpon>searchdccomp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="searchdiat.aspx.designer.vb">
+      <DependentUpon>searchdiat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchdiat.aspx.vb">
+      <DependentUpon>searchdiat.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="searchduat.aspx.designer.vb">
+      <DependentUpon>searchduat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchduat.aspx.vb">
+      <DependentUpon>searchduat.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="srchbl.aspx.designer.vb">
+      <DependentUpon>srchbl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="srchbl.aspx.vb">
+      <DependentUpon>srchbl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="srchcdat9.aspx.designer.vb">
+      <DependentUpon>srchcdat9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="srchcdat9.aspx.vb">
+      <DependentUpon>srchcdat9.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="srchcdcom.aspx.designer.vb">
+      <DependentUpon>srchcdcom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="srchcdcom.aspx.vb">
+      <DependentUpon>srchcdcom.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="srchcomp.aspx.designer.vb">
+      <DependentUpon>srchcomp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="srchcomp.aspx.vb">
+      <DependentUpon>srchcomp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="srchdecl.aspx.designer.vb">
+      <DependentUpon>srchdecl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="srchdecl.aspx.vb">
+      <DependentUpon>srchdecl.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="srchiat9.aspx.designer.vb">
+      <DependentUpon>srchiat9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="srchiat9.aspx.vb">
+      <DependentUpon>srchiat9.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="srchunat9.aspx.designer.vb">
+      <DependentUpon>srchunat9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="srchunat9.aspx.vb">
+      <DependentUpon>srchunat9.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="tlsrevenues.aspx.designer.vb">
+      <DependentUpon>tlsrevenues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tlsrevenues.aspx.vb">
+      <DependentUpon>tlsrevenues.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="unstuffedload.aspx.designer.vb">
+      <DependentUpon>unstuffedload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="unstuffedload.aspx.vb">
+      <DependentUpon>unstuffedload.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="unstuffedreturn.aspx.designer.vb">
+      <DependentUpon>unstuffedreturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="unstuffedreturn.aspx.vb">
+      <DependentUpon>unstuffedreturn.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\Dailyinspection.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Dailyinspection.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R10DCunstuff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R10DCunstuff.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R13cdblbyagentpdf.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R13cdblbyagentpdf.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R15gdpallblag.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R15gdpallblag.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R12goodspallet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R12goodspallet.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R16cdgdshipped.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R16cdgdshipped.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R17cdgdshippedbyagent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R17cdgdshippedbyagent.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R1performainvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R1performainvoice.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R11vdcinstock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R11vdcinstock.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R18invstatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R18invstatement.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R13cdblbyagent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R13cdblbyagent1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R14cdunstuff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R14cdunstuff.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R7carsindex.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R7carsindex.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R6crossdockingindex.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R6crossdockingindex.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R2cdemptycont.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R2cdemptycont.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R4loadformbyCD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R4loadformbyCD.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R3exportcont.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R3exportcont.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R5cdrtemty.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R5cdrtemty.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R9carsunstuff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R9carsunstuff.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\R8carsinstock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R8carsinstock.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\tlsproject.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6541</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Comp_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Caid_CarsIndexID" type="xs:int" minOccurs="0" />
+              <xs:element name="Caid_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="caid_Arrivaldate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="caid_carsno" type="xs:int" minOccurs="0" />
+              <xs:element name="cacn_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="caid_vesselno" type="xs:string" minOccurs="0" />
+              <xs:element name="caid_line" type="xs:string" minOccurs="0" />
+              <xs:element name="cidt_pol" type="xs:string" minOccurs="0" />
+              <xs:element name="cidt_bl" type="xs:string" minOccurs="0" />
+              <xs:element name="cidt_sno" type="xs:string" minOccurs="0" />
+              <xs:element name="cidt_cnee" type="xs:string" minOccurs="0" />
+              <xs:element name="cidt_qty" type="xs:int" minOccurs="0" />
+              <xs:element name="cidt_WT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cidt_CBM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cidt_trans" type="xs:string" minOccurs="0" />
+              <xs:element name="cidt_finaldestination" type="xs:string" minOccurs="0" />
+              <xs:element name="property" type="xs:string" minOccurs="0" />
+              <xs:element name="stage" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

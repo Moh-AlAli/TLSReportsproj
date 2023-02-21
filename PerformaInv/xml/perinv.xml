@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Lcpi_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="lcpi_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="lcpi_companyid" type="xs:int" minOccurs="0" />
+              <xs:element name="lcpi_totalinv" type="xs:decimal" minOccurs="0" />
+              <xs:element name="lcpi_accpacno" type="xs:string" minOccurs="0" />
+              <xs:element name="lcpi_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="lcpi_cnee" type="xs:string" minOccurs="0" />
+              <xs:element name="lcpi_BL" type="xs:string" minOccurs="0" />
+              <xs:element name="Lcid_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="lcid_code" type="xs:string" minOccurs="0" />
+              <xs:element name="lcid_Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Comp_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Addr_Address1" type="xs:string" minOccurs="0" />
+              <xs:element name="Addr_Address2" type="xs:string" minOccurs="0" />
+              <xs:element name="Addr_Address3" type="xs:string" minOccurs="0" />
+              <xs:element name="Addr_Address4" type="xs:string" minOccurs="0" />
+              <xs:element name="Addr_Address5" type="xs:string" minOccurs="0" />
+              <xs:element name="Capt_US" type="xs:string" minOccurs="0" />
+              <xs:element name="Capt_FamilyType" type="xs:string" minOccurs="0" />
+              <xs:element name="Capt_Family" type="xs:string" minOccurs="0" />
+              <xs:element name="Comp_IdCust" type="xs:string" minOccurs="0" />
+              <xs:element name="lcpi_customdeclare" type="xs:string" minOccurs="0" />
+              <xs:element name="Lcpi_LCLPerformaInvID" type="xs:int" minOccurs="0" />
+              <xs:element name="CDin_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="cdin_customdecl" type="xs:string" minOccurs="0" />
+              <xs:element name="Lcid_LCLPerformaInvDtID" type="xs:int" minOccurs="0" />
+              <xs:element name="lcpi_lclcontainerdetailid" type="xs:int" minOccurs="0" />
+              <xs:element name="Lcpi_Status" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
