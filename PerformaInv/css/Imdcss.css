@@ -1,0 +1,253 @@
+﻿.errlbl
+{
+    text-align: center;
+}
+
+.leftTab
+{
+    background: url('img/paneleftcorner.png') bottom no-repeat;
+    height: 16px;
+}
+
+.rightTab
+{
+    background: url('img/panerightcorner.png') bottom no-repeat;
+    height: 16px;
+}
+
+.tabmain
+{
+    background-color: #F2F2F2;
+    height: 40px;
+    width: 747px;
+    margin-top: -8px;
+}
+
+.tabImage
+{
+    padding: 0px;
+    max-width: 30px;
+    background: url('img/panerepeat.jpg') bottom repeat-x;
+    color: #4D4F53;
+}
+
+.fulltab
+{
+    width: 100%;
+    height: 100%;
+}
+
+.lbltit
+{
+    color: #4d4f53;
+    font-family: Tahoma ,Arial;
+    font-size: 12pt;
+    font-weight: bold;
+        
+}
+
+.headtit
+{
+	color: #4d4f53;
+    font-family: Tahoma ,Arial;
+    font-size: 12pt;
+    font-weight: bold;
+	text-align :center;
+}
+
+
+.texts
+{
+    color: #4d4f53;
+    font-family: Tahoma ,Arial;
+    font-size: 11pt;
+   
+}
+
+.num
+{
+    color: #4d4f53;
+    font-family: Tahoma ,Arial;
+    font-size: 11pt;
+    height: 20px;
+    width: 150px;
+}
+
+.CustLbl
+{
+    width: 100px;
+}
+
+.NoLbl
+{
+}
+
+SrchLbl
+{
+    width: 155px;
+}
+
+.Center
+{
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    font-family: Tahoma,Arial;
+    font-size: 12px;
+    margin-left: 0px;
+}
+
+.AddBtn
+{
+    width: 39px;
+    height: 32px;
+}
+
+.TblBtn
+{
+    width: 25px;
+    height: 25px;
+}
+
+.GVHeader
+{
+    color: White;
+    font-weight: bold;
+    font-family: Tahoma,Arial;
+    font-size: 15px;
+    background-color: #B3B3B3;
+}
+
+.GVHeader th
+{
+    color: White;
+    font-weight: bold;
+    font-family: Tahoma,Arial;
+    font-size: 15px;
+    background-color: #B3B3B3;
+    border: 1px Solid White;
+    border-style: solid;
+    padding: 1px;
+    text-align: center;
+}
+
+.loading-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1100;
+    background: url('../img/ajax-loader1.gif') rgba(0, 0, 0, 0.2) no-repeat 50% 50%;
+    /*background-image: url('../img/ajax-loader1.gif');*/
+}
+
+.GVTable
+{
+    color: #333333;
+    border: 1px Solid White;
+    border-style: solid;
+    padding: 1px;
+}
+
+.GVTable td
+{
+    color: #333333;
+    border: 1px Solid White;
+    border-style: solid;
+    padding: 1px;
+}
+
+.GVPager td
+{
+    color: #333333;
+    border: 0px Solid White;
+    border-style: solid;
+    padding: 1px;
+}
+
+.GVTableElm
+{
+    width: 775px;
+}
+
+.style1
+{
+    width: 85px;
+}
+
+.style2
+{
+    width: 740px;
+}
+
+.style3
+{
+    width: 725px;
+    border: 1px solid #FFFFFF;
+}
+
+.style4
+{
+    height: 5px;
+    width: 740px;
+}
+
+.style5
+{
+    background-color: #F2F2F2;
+    height: 130px;
+    width: 783px;
+    margin-top: -8px;
+}
+
+.style6
+{
+    width: 940px;
+}
+
+.style7
+{
+    width: 780px;
+}
+
+.style8
+{
+    height: 5px;
+    width: 775px;
+}
+
+.style9
+{
+    width: 770px;
+    background-color: #F2F2F2;
+}
+
+.style10
+{
+
+}
+
+.style11
+{
+    width: 940px;
+    height: 8px;
+}
+
+/*#frmitems
+{
+    width: 790px;
+    margin-right: 20px;
+}*/
+
+.GVBtns
+{
+    width: 25px;
+}
+
+.GVTxt
+{
+    padding-left: 7px;
+    width: 95%;
+}

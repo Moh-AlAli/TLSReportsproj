@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class invsumbyser
 
     '''<summary>
-    '''frmcdblg control.
+    '''form1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents frmcdblg As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
     '''Lblmsg control.
@@ -138,6 +138,24 @@ Partial Public Class invsumbyser
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Gvcomp As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''Label2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''DDLserv control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DDLserv As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''lblpv control.

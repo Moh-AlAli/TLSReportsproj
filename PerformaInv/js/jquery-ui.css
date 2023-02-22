@@ -173,12 +173,13 @@
 	-ms-touch-action: none;
 	touch-action: none;
 }
-.ui-afont-size: 100%;ordion-header {
+.ui-accordion .ui-accordion-header {
 	display: block;
-	cursor: poinleft: 2.2em;
-}
-.ui-accordion .ui-accordion-icons .ui-accordion-icons {
-	paddileftng-tn-height: 0; /* support: IE7 */
+	cursor: pointer;
+	position: relative;
+	margin: 2px 0 0 0;
+	padding: .5em .5em .5em .7em;
+	min-height: 0; /* support: IE7 */
 	font-size: 100%;
 }
 .ui-accordion .ui-accordion-icons {

@@ -4,102 +4,84 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Invoices summary by Loading/off-loading</title>
- <link href="css/parform.css" rel="Stylesheet" type="text/css" />
-    
-        <link href ="css/ui-lightness/jquery-ui-1.9.2.custom.min.css"rel="Stylesheet" type="text/css"  />
-
+    <title>Invoices summary by Service</title>
+  <link href ="css/parform.css"  rel="Stylesheet" type ="text/css"  />
+      <link href ="css/ui-lightness/jquery-ui-1.9.2.custom.min.css"rel="Stylesheet" type="text/css"  />
+           <link href ="css/ui-lightness/jquery-ui-timepicker-addon.css" rel="Stylesheet" type="text/css"  />
            <script src="jq/jquery-1.8.3.js"  ></script>
            <script src="jq/jquery-ui-1.9.2.custom.js"   ></script>
            <script src="jq/jquery-ui-1.9.2.custom.min.js"   ></script>
-          
     <link href="js/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
     <link href="js/jquery-ui.theme.css" rel="stylesheet" type="text/css" />
     <link href="js/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery-ui.theme.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="js/modal.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
 
-  <script>
-      $(function () {
-          $("#Txtfd").datepicker(
-          {
-              dateFormat: "yy-mm-dd"
+ 
 
-          }
-          );
-          $("#Txttd").datepicker(
-              {
-                  dateFormat: "yy-mm-dd"
+ <script>
 
-              }
-              );
-      }
-  );
-           </script>
+     $(function () {
+         $("#Txtfd").datepicker(
+             {
+                 dateFormat: "yy-mm-dd"
 
-    <style type="text/css">
-        .auto-style1 {
-            width: 85px;
-            height: 26px;
-        }
-        .auto-style2 {
-            height: 26px;
-        }
-    </style>
+             }
+         );
+         $("#Txttd").datepicker(
+             {
+                 dateFormat: "yy-mm-dd"
+
+             }
+         );
+     }
+     );
+ </script>
+
+
+   
 
 </head>
 <body>
-    <form id="frmcdblg" runat="server">
-    <div>
-      
-    </div>
-    <div>
-    <table class="fultab" >
+    <form id="form1"   runat="server">
+        <table class="fultab" >
       <tr>
-      <td>
+      <td class="tdtit" >
+           <asp:Label ID="Lblmsg" Visible="false"  runat="server" Text=""></asp:Label>
       </td>
-       <td>
-      <table>
-      <tr>
-      <td  >
-      </td>
-      <td class="tdtit"   >
-      </td>
-      <td>
-      <asp:Label ID="Lblmsg" Visible="false"  runat="server" Text=""></asp:Label>
-      </td>
-      </tr>
-      </table>
-      </td>
-      <td  class="tddiv">
-      </td>
-      <td>
-      </td>
+     
+     
       </tr>
       <tr>
-      
+     
       <td>
       <table>
       <tr>
 
-      <td style="width:30px;"   >
+      <td style="width:160px;"   >
       </td>
       <td  >
-       <asp:Label ID="Label1" CssClass="lblt" style="font-size :14pt;"   runat="server" Text="Invoices summary by Loading/off-loading"></asp:Label>
+       <asp:Label ID="Label1" CssClass="lblt" style="font-size :14pt;"   runat="server" Text="Invoices Summary By Services"></asp:Label>
       </td>
       </tr>
       </table>
        
-      </td>
-      <td  class="tddiv">
       </td>
       <td class="tddiv" >
       </td>
      
       </tr>
       </table> 
-      </div>
+   
     <table >
     <tr>
+ <td style="width:100px;"></td>
     <td  >
     <asp:Panel ID="panpar"  runat  ="server"  Height ="300px" Width="625px"  >
    <table >
@@ -110,7 +92,7 @@
     <tr>
  <td class="td" >
  </td>
-    <td>
+    <td class="auto-style1">
     <table class ="tbr">
     <tr>
     <td>
@@ -159,6 +141,9 @@
         
      
     </tr>
+        <tr>
+<td class="untdp"></td>
+        </tr>
      </table> 
       </td>
           </tr>
@@ -179,13 +164,13 @@
                             <asp:TemplateField Visible="False">
                                 <ItemTemplate>
                                     <asp:Label ID="Label6" Width="300px" runat="server" 
-                                  Text='<%# bind("comp_companyid") %>'></asp:Label>
+                                  Text='<%#Bind("comp_companyid") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Customer">
                                 <ItemTemplate>
                                     <asp:LinkButton ID="Lkname" Width="300px"  runat="server" onclick="Lkname_Click" 
-                                  Text='<%# bind("comp_name") %>'></asp:LinkButton>
+                                  Text='<%#Bind("comp_name") %>'></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             
@@ -204,7 +189,23 @@
        </table> 
         </td>
     </tr>
-        
+        <tr>
+           <td>
+               <table>
+                   <tr>
+                              <td  class="untdp" ><asp:Label ID="Label2"  CssClass ="lbl" runat="server" Text="Service"></asp:Label></td>
+            <td>
+            <asp:DropDownList ID="DDLserv" runat="server"></asp:DropDownList>
+                </td>
+                   </tr>
+               </table>
+
+           </td>
+               <%-- </tr>
+            </table>
+                </td>--%>
+           
+        </tr>
     </table>
     </td>
    
@@ -233,6 +234,9 @@
     </td>
     <td class="rttab">
     </td>
+        </tr> 
+        </table> 
+        
     </td>
     </tr>
     <tr>
@@ -274,15 +278,12 @@
     </td>
     </tr>
     </table>
+        </asp:Panel> 
        </td> 
        </tr> 
        </table> 
-        </asp:Panel>
-    </td>
-    
-    </tr>
-    </table>
-     
+ 
+
     </form>
 </body>
 </html>

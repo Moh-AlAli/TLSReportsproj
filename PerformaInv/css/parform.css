@@ -47,8 +47,14 @@ width : 200px;
 .tbr
 {
     background-color :#e8e5ef;
-    width: 523px;
+    width: 723px;
     border :1px Solid blue;
+}
+
+.tbrbotstrp {
+    background-color: #e8e5ef;
+    width: 723px;
+    border: 1px Solid blue;
 }
 .rttab
 {

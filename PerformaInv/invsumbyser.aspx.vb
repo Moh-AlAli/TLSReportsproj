@@ -8,12 +8,25 @@ Public Class invsumbyser
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             If Not Page.IsPostBack() Then
+                Dim c As New clsreport
+                Dim ds As New DataSet
+                ds = c.invservices()
+                DDlserv.Items.Add(New ListItem("--All--", "0"))
+                If ds.Tables(0).Rows.Count > 0 Then
+                    For i As Integer = 0 To ds.Tables(0).Rows.Count - 1 Step 1
+                        Dim servcode As String = ds.Tables(0).Rows(i).Item("capt_code").ToString()
+                        Dim servtxt As String = ds.Tables(0).Rows(i).Item("capt_us").ToString()
+                        DDlserv.Items.Add(New ListItem(servtxt, servcode))
+                    Next
+                End If
+                Lblmsg.Visible = False
                 pancomp.Visible = False
                 Imgbx.Visible = False
                 rbcr.Checked = True
             End If
         Catch ex As Exception
-            Response.Write(ex.Message)
+            Lblmsg.Visible = True
+            Lblmsg.Text = ex.Message
         End Try
     End Sub
     Protected Sub Page_unLoad(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Unload
@@ -25,7 +38,8 @@ Public Class invsumbyser
     End Sub
 
     Protected Sub Impprv_Click(sender As Object, e As ImageClickEventArgs) Handles Impprv.Click
-        Try
+        Try '
+            Lblmsg.Visible = False
             Dim c As New clsreport
 
             Dim fd As DateTime
@@ -53,16 +67,19 @@ Public Class invsumbyser
                 fcom = dc.Tables(0).Rows(0).Item("comp_companyid").ToString()
             End If
 
-          
+            Dim srvc As String = "%%"
+            If DDLserv.SelectedValue <> "0" Then
+                srvc = DDLserv.SelectedValue
+            End If
             If fd <= td Then
                 Dim ds As New DataSet
-                ds = c.sumbyserv(fd, td, fcom)
+                ds = c.sumbyserv(fd, td, fcom, srvc)
 
                 ' ds.WriteXmlSchema(HttpContext.Current.Server.MapPath("invsumbyser.aspx").Replace("invsumbyser.aspx", "xml\xinvssumserv.xml"))
 
-                rdoc.Load(HttpContext.Current.Server.MapPath("invsumbyser.aspx").Replace("invsumbyser.aspx", "reports\invoicesSummaryDetails.rpt"))
+                rdoc.Load(HttpContext.Current.Server.MapPath("invsumbyser.aspx").Replace("invsumbyser.aspx", "reports\invoicesSummarybyserv.rpt"))
                 rdoc.SetDataSource(ds)
-               
+
 
 
 
@@ -91,7 +108,8 @@ Public Class invsumbyser
             GC.WaitForFullGCComplete()
             GC.Collect()
         Catch ex As Exception
-            Response.Write(ex.Message)
+            Lblmsg.Visible = True
+            Lblmsg.Text = ex.Message
             If rdoc Is Nothing Then
                 rdoc.Dispose()
                 rdoc.Close()
@@ -107,19 +125,25 @@ Public Class invsumbyser
     End Sub
 
     Protected Sub Imgscm_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles Imgscm.Click
-        pancomp.Visible = True
-        Imgbx.Visible = True
-        Dim c As New clsreport
+        Try
+            pancomp.Visible = True
+            Imgbx.Visible = True
+            Dim c As New clsreport
 
-        Dim dt As New DataSet
-        dt = c.company(LTrim(RTrim(Txtcom.Text)))
-        Gvcomp.DataSource = dt
-        Gvcomp.DataBind()
+            Dim dt As New DataSet
+            dt = c.company(LTrim(RTrim(Txtcom.Text)))
+            Gvcomp.DataSource = dt
+            Gvcomp.DataBind()
+        Catch ex As Exception
+            Lblmsg.Visible = True
+            Lblmsg.Text = ex.Message
+        End Try
+
     End Sub
 
     Protected Sub Lkname_Click(ByVal sender As Object, ByVal e As EventArgs)
         Try
-
+            Lblmsg.Visible = False
             Dim lk As LinkButton = DirectCast(sender, LinkButton)
             Dim rowcus As GridViewRow = DirectCast(lk.Parent.Parent, GridViewRow)
             Dim rincus As Integer = rowcus.RowIndex
@@ -130,7 +154,8 @@ Public Class invsumbyser
             Imgbx.Visible = False
 
         Catch ex As Exception
-
+            Lblmsg.Visible = True
+            Lblmsg.Text = ex.Message
         End Try
     End Sub
 

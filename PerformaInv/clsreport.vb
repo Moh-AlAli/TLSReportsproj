@@ -35,7 +35,7 @@ Public Class clsreport
         Dim pass As String = Decryption(Password, secretkey)
 
         Dim cons As String = "Data Source =" & ds & "; DataBase =" & db & "; User Id =" & uid & "; Password =" & pass & ";"
-        '    Dim cons As String = "Data Source =192.168.1.39; DataBase =CRM; User Id =sa; Password =admin@123;"
+
 
         Return cons
     End Function
@@ -49,10 +49,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function contract(ByVal name As String) As DataSet
@@ -64,10 +67,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function empcon(ByVal did As Integer) As DataSet
@@ -83,10 +89,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function pinv(ByVal pid As Integer) As DataSet
@@ -116,10 +125,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function expcon(ByVal did As Integer) As DataSet
@@ -134,10 +146,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function unstuffedload(ByVal did As Integer) As DataSet
@@ -154,10 +169,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function unstuffedreturn(ByVal did As Integer) As DataSet
@@ -175,10 +193,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function Cdindex(ByVal cid As Integer) As DataSet
@@ -195,10 +216,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function Carsindex(ByVal rid As Integer) As DataSet
@@ -215,10 +239,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function Carsinstock(ByVal fd As String, ByVal td As String, ByVal fcomp As Int32, ByVal tcomp As Int32, ByVal at9 As String, ByVal bl As String) As DataSet
@@ -235,10 +262,13 @@ Public Class clsreport
             .CommandText = Sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function Carsshipped(ByVal fd As String, ByVal td As String, ByVal fcomp As Int32, ByVal tcomp As Int32, ByVal at9 As String, ByVal bl As String) As DataSet
@@ -256,10 +286,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function compname(ByVal comp As String) As DataSet
@@ -276,10 +309,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function blname(ByVal bl As String) As DataSet
@@ -293,10 +329,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function at9(ByVal at As String) As DataSet
@@ -310,10 +349,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function unat9(ByVal at As String) As DataSet
@@ -328,10 +370,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -346,10 +391,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -366,10 +414,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function dunat9(ByVal at As String) As DataSet
@@ -384,10 +435,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function dinstock() As DataSet
@@ -410,10 +464,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function dcompname(ByVal comp As String) As DataSet
@@ -430,10 +487,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -449,10 +509,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function dat9(ByVal at As String) As DataSet
@@ -467,10 +530,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function goodspallet() As DataSet
@@ -486,10 +552,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function gscomp(ByVal name As String) As DataSet
@@ -506,10 +575,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function gsbl(ByVal bl As String, ByVal cid As Integer) As DataSet
@@ -526,10 +598,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function gpcomp(ByVal name As String) As DataSet
@@ -545,10 +620,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function gpbl(ByVal bl As String, ByVal cid As Integer) As DataSet
@@ -564,10 +642,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function cdblagent() As DataSet
@@ -582,10 +663,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -601,10 +685,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function cdcud(ByVal cud As String) As DataSet
@@ -619,10 +706,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function cdunat9(ByVal at9 As String) As DataSet
@@ -638,10 +728,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function cdunstuff() As DataSet
@@ -656,10 +749,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function gdpship() As DataSet
@@ -675,10 +771,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function gdpshipbyagent(ByVal goods As String, ByVal fdate As String, ByVal tdate As String, ByVal fcomp As Int64, ByVal tcomp As Int64, ByVal bl As String) As DataSet
@@ -693,10 +792,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function invstate(ByVal fd As String, ByVal td As String, ByVal fcomp As Int64, ByVal tcomp As Integer, ByVal condtype As String) As DataSet
@@ -709,10 +811,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -726,10 +831,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function continsp(ByVal fd As String, ByVal td As String) As DataSet
@@ -745,10 +853,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
     Friend Function invinsp(ByVal cinsid) As DataSet
@@ -760,10 +871,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -784,10 +898,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -802,10 +919,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -822,10 +942,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataTable
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -841,10 +964,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -857,10 +983,13 @@ Public Class clsreport
             .CommandText = Sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -873,10 +1002,13 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
 
@@ -891,20 +1023,23 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
-    Friend Function sumbyserv(ByVal fd As DateTime, ByVal td As DateTime, ByVal comp As String) As DataSet
+    Friend Function sumbyservlodofflod(ByVal fd As DateTime, ByVal td As DateTime, ByVal comp As String) As DataSet
         Dim cmd As New SqlCommand
-        Dim sql As String = "select Lcpi_LCLPerformaInvID,Lcid_LCLPerformaInvDtID,cdin_startunstuffing,comp_name,cdin_name,cdin_customdecl,convert(datetime,left(convert(nvarchar,lcpi_valuedate,120),10)) as invdate,lcpi_accpacno,(select capt_us from Custom_Captions where capt_code=lclperformainvdt.lcid_code and Capt_Family='lcid_code') as servicedesc,coalesce(lcid_Amount,0) as amnt,Lcid_Name,lcid_note      " & _
-                            " from LCLPerformaInv ,lclperformainvdt,Company,cdindex " & _
-                            " where Lcpi_LCLPerformaInvID =lcid_LCLPerformaInvid and Comp_CompanyId=lcpi_companyid and cdin_cdindexid=lcpi_cdindexid " & _
-                            " and Lcpi_Status='Posted' and Lcpi_Deleted is null " & _
-                            " and Lcid_Deleted is null and lcid_code in('001','012') " & _
-                            " and lcpi_companyid like '" & comp & "' and convert(datetime,left(convert(nvarchar,lcpi_valuedate,120),10)) between '" & fd & "' and '" & td & "'" & _
+        Dim sql As String = "select Lcpi_LCLPerformaInvID,Lcid_LCLPerformaInvDtID,cdin_startunstuffing,comp_companyid,comp_name,cdin_name,cdin_customdecl,convert(datetime,left(convert(nvarchar,lcpi_valuedate,120),10)) as invdate,lcpi_accpacno,(select capt_us from Custom_Captions where capt_code=lclperformainvdt.lcid_code and Capt_Family='lcid_code') as servicedesc,coalesce(lcid_Amount,0) as amnt,Lcid_Name,lcid_note      " &
+                            " from LCLPerformaInv ,lclperformainvdt,Company,cdindex " &
+                            " where Lcpi_LCLPerformaInvID =lcid_LCLPerformaInvid and Comp_CompanyId=lcpi_companyid and cdin_cdindexid=lcpi_cdindexid " &
+                            " and Lcpi_Status='Posted' and Lcpi_Deleted is null " &
+                            " and Lcid_Deleted is null and lcid_code in('001','012') and coalesce(lcid_Amount,0)<>0" &
+                            " and lcpi_companyid like '" & comp & "' and convert(datetime,left(convert(nvarchar,lcpi_valuedate,120),10)) between '" & fd & "' and '" & td & "'" &
                             " order by lcid_code  "
         Dim da As New SqlDataAdapter
         Dim con As New SqlConnection(Readconnectionstring())
@@ -912,10 +1047,58 @@ Public Class clsreport
             .CommandText = sql
             .CommandType = CommandType.Text
             .Connection = con
+            .CommandTimeout = 0
         End With
         Dim dt As New DataSet
         da.SelectCommand = cmd
         da.Fill(dt)
+        con.Close()
+        con.Dispose()
         Return dt
     End Function
+
+    Friend Function sumbyserv(ByVal fd As DateTime, ByVal td As DateTime, ByVal comp As String, ByVal servc As String) As DataSet
+        Dim cmd As New SqlCommand
+        Dim sql As String = "select Lcpi_LCLPerformaInvID,Lcid_LCLPerformaInvDtID,cdin_startunstuffing,comp_companyid,comp_name,cdin_name,cdin_customdecl,convert(datetime,left(convert(nvarchar,lcpi_valuedate,120),10)) as invdate,lcpi_accpacno,(select capt_us from Custom_Captions where capt_code=lclperformainvdt.lcid_code and Capt_Family='lcid_code') as servicedesc,coalesce(lcid_Amount,0) as amnt,Lcid_Name,lcid_note      " &
+                            " from LCLPerformaInv ,lclperformainvdt,Company,cdindex " &
+                            " where Lcpi_LCLPerformaInvID =lcid_LCLPerformaInvid and Comp_CompanyId=lcpi_companyid and cdin_cdindexid=lcpi_cdindexid " &
+                            " and Lcpi_Status in('Posted','Draft') and Lcpi_Deleted is null " &
+                            " and Lcid_Deleted is null  and coalesce(lcid_Amount,0)<>0" &
+                            " and lcpi_companyid like '" & comp & "' and convert(datetime,left(convert(nvarchar,lcpi_valuedate,120),10)) between '" & fd & "' and '" & td & "' and ltrim(rtrim(coalesce(lcid_code,''))) like '" & Trim(servc) & "'" &
+                            " order by lcid_code  "
+        Dim da As New SqlDataAdapter
+        Dim con As New SqlConnection(Readconnectionstring())
+        With cmd
+            .CommandText = sql
+            .CommandType = CommandType.Text
+            .Connection = con
+            .CommandTimeout = 0
+        End With
+        Dim dt As New DataSet
+        da.SelectCommand = cmd
+        da.Fill(dt)
+        con.Close()
+        con.Dispose()
+        Return dt
+    End Function
+
+    Friend Function invservices() As DataSet
+        Dim cmd As New SqlCommand
+        Dim sql As String = "Select  capt_code,capt_us from custom_captions where capt_family='lcid_code' and capt_deleted is null order by convert(nvarchar,Capt_US)"
+        Dim da As New SqlDataAdapter
+        Dim con As New SqlConnection(Readconnectionstring())
+        With cmd
+            .CommandText = sql
+            .CommandType = CommandType.Text
+            .Connection = con
+            .CommandTimeout = 0
+        End With
+        Dim dt As New DataSet
+        da.SelectCommand = cmd
+        da.Fill(dt)
+        con.Close()
+        con.Dispose()
+        Return dt
+    End Function
+
 End Class

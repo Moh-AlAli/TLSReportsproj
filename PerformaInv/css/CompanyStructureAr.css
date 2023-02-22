@@ -1,0 +1,96 @@
+﻿.tree li {
+    margin: 0px 0;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0px 5px;
+}
+.tree li::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    left: auto;
+    right: -20px;
+    border-left: 1px solid #ccc ;
+    bottom: 50px;
+}
+.tree li::after {
+    content:'';
+    position: absolute;
+    top: 30px;
+    width: 25px;
+    height: 20px;
+    left: auto;
+    right: -20px;
+    border-top: 1px solid #ccc ;
+}
+
+.tree li a {
+    cursor:pointer;
+    display: inline-block;
+    /*border: 1px solid #ccc;*/
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #666;
+    font-family: arial, verdana, tahoma;
+    font-size: 15px;
+    /*border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;*/
+}
+/*Remove connectors before root*/
+ .tree > ul > li::before, .tree > ul > li::after {
+    border: 0;
+}
+/*Remove connectors after last child*/
+ .tree li:last-child::before {
+    height: 30px;
+}
+/*Time for some hover effects*/
+
+/*We will apply the hover effect the the lineage of the element also*/
+ .tree li a:hover, .tree li a:hover+ul li a {
+    /*background: #c8e4f8;*/
+    color: #000;
+    /*border: 1px solid #94a0b4;*/
+}
+/*Connector styles on hover*/
+ .tree li a:hover+ul li::after, .tree li a:hover+ul li::before, .tree li a:hover+ul::before, .tree li a:hover+ul ul::before {
+    /*border-color: #94a0b4;*/
+}
+.custom-menu {
+   
+ position: absolute;
+top: 100%;
+left: 0;
+z-index: 1000;
+float: left;
+min-width: 130px;
+padding: 5px 0;
+margin: 2px 0 0;
+font-size: 14px;
+text-align: left;
+list-style: none;
+background-color: #fff;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+border: 1px solid #ccc;
+border: 1px solid rgba(0, 0, 0, .15);
+border-radius: 4px;
+/* -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175); */
+/* box-shadow: 0 6px 12px rgba(0, 0, 0, .175); */
+}
+.custom-menu> li > a {
+display: block;
+padding: 3px 20px;
+clear: both;
+font-weight: normal;
+line-height: 1.42857143;
+color: #333;
+white-space: nowrap;
+}
+.custom-menu > li:hover {
+  background-color:#0094ff;
+  cursor:pointer;
+}

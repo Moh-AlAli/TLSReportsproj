@@ -28,6 +28,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,8 +60,8 @@
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -101,20 +103,74 @@
     <Content Include="cdgoodshipped.aspx" />
     <Content Include="cdunstuffed.aspx" />
     <Content Include="continspec.aspx" />
+    <Content Include="css\autocomplete.css" />
+    <Content Include="css\bootstrap-datepicker.css" />
+    <Content Include="css\bootstrap-datepicker3.css" />
+    <Content Include="css\bootstrap-icons.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\CompanyStructure.css" />
+    <Content Include="css\CompanyStructureAr.css" />
+    <Content Include="css\core.css" />
+    <Content Include="css\dataTables.bootstrap.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\Imdcss.css" />
+    <Content Include="css\jquery-clockpicker.min.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.calendars.picker.css" />
+    <Content Include="css\LoginPageSite.css" />
+    <Content Include="css\MainSite.css" />
+    <Content Include="css\MainSiteAr.css" />
+    <Content Include="css\profile-42914_640.png" />
+    <Content Include="css\theme.css" />
+    <Content Include="css\toastr.css" />
+    <Content Include="css\toastr.min.css" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\ui-lightness\jquery-ui-1.9.2.custom.css" />
+    <Content Include="css\ui-lightness\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="css\ui-lightness\jquery-ui-timepicker-addon.css" />
     <Content Include="gbl.aspx" />
     <Content Include="gcomp.aspx" />
     <Content Include="gdshbl.aspx" />
     <Content Include="gdshcomp.aspx" />
     <Content Include="img\close-icon-29.png" />
     <Content Include="invsestatement.aspx" />
+    <Content Include="invsumbyallservices.aspx" />
     <Content Include="invsumbyser.aspx" />
     <Content Include="jq\jquery-1.8.3.js" />
     <Content Include="jq\jquery-ui-1.9.2.custom.js" />
     <Content Include="jq\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="js\affix.js" />
+    <Content Include="js\alert.js" />
     <Content Include="js\angular.js" />
     <Content Include="js\app.js" />
+    <Content Include="js\bootstrap-datepicker.js" />
+    <Content Include="js\bootstrap-rtl.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\button.js" />
+    <Content Include="js\carousel-rtl.js" />
+    <Content Include="js\Chart.js" />
+    <Content Include="js\collapse.js" />
+    <Content Include="js\dataTables.bootstrap.js" />
+    <Content Include="js\dropdown.js" />
     <Content Include="js\external\jquery\jquery.js" />
     <Content Include="js\images\ui-icons_444444_256x240.png" />
     <Content Include="js\images\ui-icons_555555_256x240.png" />
@@ -123,7 +179,19 @@
     <Content Include="js\images\ui-icons_cc0000_256x240.png" />
     <Content Include="js\images\ui-icons_ffffff_256x240.png" />
     <Content Include="js\index.html" />
+    <Content Include="js\ItemsPageScript.js" />
+    <Content Include="js\jquery-1.10.0.min.js" />
     <Content Include="js\jquery-1.12.3.min.js" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="js\jquery-2.1.4.intellisense.js" />
+    <Content Include="js\jquery-2.1.4.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="js\jquery-clockpicker.min.js" />
+    <Content Include="js\jquery-ui-1.11.4.js" />
+    <Content Include="js\jquery-ui-1.11.4.min.js" />
     <Content Include="js\jquery-ui.css" />
     <Content Include="js\jquery-ui.js" />
     <Content Include="js\jquery-ui.min.css" />
@@ -132,8 +200,35 @@
     <Content Include="js\jquery-ui.structure.min.css" />
     <Content Include="js\jquery-ui.theme.css" />
     <Content Include="js\jquery-ui.theme.min.css" />
+    <Content Include="js\jquery.calendars.islamic.js" />
+    <Content Include="js\jquery.calendars.js" />
+    <Content Include="js\jquery.calendars.picker.js" />
+    <Content Include="js\jquery.calendars.plus.js" />
+    <Content Include="js\jquery.dataTables.js" />
+    <Content Include="js\jquery.plugin.js" />
+    <Content Include="js\jquery.unobtrusive-ajax.js" />
+    <Content Include="js\jquery.unobtrusive-ajax.min.js" />
+    <None Include="js\jquery.validate-vsdoc.js" />
+    <Content Include="js\jquery.validate.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\jquery.validate.unobtrusive.js" />
+    <Content Include="js\jquery.validate.unobtrusive.min.js" />
     <Content Include="js\MainController.js" />
+    <Content Include="js\MainScript.js" />
+    <Content Include="js\modal.js" />
     <Content Include="js\npm.js" />
+    <Content Include="js\popover.js" />
+    <Content Include="js\respond.js" />
+    <Content Include="js\respond.matchmedia.addListener.js" />
+    <Content Include="js\respond.matchmedia.addListener.min.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="js\scrollspy.js" />
+    <Content Include="js\tab.js" />
+    <Content Include="js\toastr.js" />
+    <Content Include="js\toastr.min.js" />
+    <Content Include="js\tooltip.js" />
+    <Content Include="js\transition.js" />
+    <None Include="js\_references.js" />
     <Content Include="rptmonthly.aspx" />
     <Content Include="srchcdat9.aspx" />
     <Content Include="srchcdcom.aspx" />
@@ -333,6 +428,13 @@
       <DependentUpon>invsestatement.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="invsumbyallservices.aspx.designer.vb">
+      <DependentUpon>invsumbyallservices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invsumbyallservices.aspx.vb">
+      <DependentUpon>invsumbyallservices.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="invsumbyser.aspx.designer.vb">
       <DependentUpon>invsumbyser.aspx</DependentUpon>
     </Compile>
@@ -344,6 +446,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
       <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
@@ -688,6 +791,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\toastr.less" />
+    <Content Include="css\toastr.scss" />
+    <Content Include="js\jquery-2.1.4.min.map" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

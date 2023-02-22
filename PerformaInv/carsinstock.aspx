@@ -7,35 +7,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Cars in-stock</title>
-    <link href="css/parform.css"  rel="Stylesheet" type="text/css"  /> 
- <link href ="css/ui-lightness/jquery-ui-1.9.2.custom.min.css"rel="Stylesheet" type="text/css"  />
+
+  <link href ="css/parform.css"  rel="Stylesheet" type ="text/css"  />
+
+       <link href ="css/ui-lightness/jquery-ui-1.9.2.custom.min.css"rel="Stylesheet" type="text/css"  />
            <link href ="css/ui-lightness/jquery-ui-timepicker-addon.css" rel="Stylesheet" type="text/css"  />
            <script src="jq/jquery-1.8.3.js"  ></script>
            <script src="jq/jquery-ui-1.9.2.custom.js"   ></script>
            <script src="jq/jquery-ui-1.9.2.custom.min.js"   ></script>
-           <script  src="jq/jquery-ui-timepicker-addon.js"  ></script>
+    <link href="js/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery-ui.theme.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css" />
     <link href="js/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
     <link href="js/jquery-ui.theme.css" rel="stylesheet" type="text/css" />
     <link href="js/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css" />
  
-           <script>
-               $(function() {
-               $("#Txtfd").datepicker(
-               { dateFormat : "yy-mm-dd"
-         
-           }
-               );
-               $("#Txttd").datepicker(
-               { dateFormat: "yy-mm-dd",
-                
-                 
-               }
-               );
-        
-               }
-           );
-               </script>
+         <script>
+
+             $(function () {
+                 $("#Txtfd").datepicker(
+                     {
+                         dateFormat: "yy-mm-dd"
+
+                     }
+                 );
+                 $("#Txttd").datepicker(
+                     {
+                         dateFormat: "yy-mm-dd"
+
+                     }
+                 );
+             }
+             );
+         </script>
 </head>
 <body>
     <form id="form1" runat="server">
