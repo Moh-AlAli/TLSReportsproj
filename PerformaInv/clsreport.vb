@@ -1037,7 +1037,7 @@ Public Class clsreport
         Dim sql As String = "select Lcpi_LCLPerformaInvID,Lcid_LCLPerformaInvDtID,cdin_startunstuffing,comp_companyid,comp_name,cdin_name,cdin_customdecl,convert(datetime,left(convert(nvarchar,lcpi_valuedate,120),10)) as invdate,lcpi_accpacno,(select capt_us from Custom_Captions where capt_code=lclperformainvdt.lcid_code and Capt_Family='lcid_code') as servicedesc,coalesce(lcid_Amount,0) as amnt,Lcid_Name,lcid_note      " &
                             " from LCLPerformaInv ,lclperformainvdt,Company,cdindex " &
                             " where Lcpi_LCLPerformaInvID =lcid_LCLPerformaInvid and Comp_CompanyId=lcpi_companyid and cdin_cdindexid=lcpi_cdindexid " &
-                            " and Lcpi_Status='Posted' and Lcpi_Deleted is null " &
+                            " and Lcpi_Status in('Posted','Draft') and Lcpi_Deleted is null " &
                             " and Lcid_Deleted is null and lcid_code in('001','012') and coalesce(lcid_Amount,0)<>0" &
                             " and lcpi_companyid like '" & comp & "' and convert(datetime,left(convert(nvarchar,lcpi_valuedate,120),10)) between '" & fd & "' and '" & td & "'" &
                             " order by lcid_code  "
